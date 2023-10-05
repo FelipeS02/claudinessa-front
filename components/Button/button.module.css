@@ -1,0 +1,30 @@
+.primary,
+.secondary {
+  all: unset;
+  font-family: var(--font-poppins);
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.primary:hover {
+  color: black;
+}
+
+.lg {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.m {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.primary {
+  background-color: var(--brand-color);
+  color: #ffffff;
+}

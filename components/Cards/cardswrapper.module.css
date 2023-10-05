@@ -1,0 +1,29 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--p1);
+  padding-block: var(--p1);
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+    padding-block: 0;
+  }
+}
+
+.favourites {
+  display: flex;
+  gap: var(--p1);
+  max-width: 100%;
+  overflow-y: scroll;
+  padding-block: var(--p1);
+
+  @media only screen and (max-width: 768px) {
+    padding-block: var(--p1) 0;
+  }
+}
+
+.favourites > article:last-child {
+  margin-right: 1rem;
+}

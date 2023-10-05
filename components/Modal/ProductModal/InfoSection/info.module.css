@@ -1,0 +1,39 @@
+.categoryWrapper {
+  margin: 0;
+  width: 100%;
+  @media only screen and (max-width: 768px) {
+    padding-bottom: 120px;
+  }
+}
+
+.infoContainer {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 0.5rem;
+  gap: 15px;
+}
+
+.info {
+  text-wrap: balance;
+}
+
+.options {
+  gap: 1rem;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.option {
+  width: 40%;
+  max-width: 200px;
+  justify-content: space-between;
+  border: 1px solid var(--gray);
+  padding: 0 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border 250ms linear;
+}
+
+.selected {
+    border-color: var(--brand-color) !important;
+}

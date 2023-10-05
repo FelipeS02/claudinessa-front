@@ -1,0 +1,25 @@
+.button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  padding-inline: 15px;
+  color: var(--brand-color);
+}
+
+.button[disabled] > svg {
+  color: var(--gray);
+}
+
+.container {
+  border-radius: 4px;
+  border: 1px solid var(--brand-color);
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  height: 44px;
+}
+
+.container > span {
+  width: 1em;
+  text-align: center;
+}

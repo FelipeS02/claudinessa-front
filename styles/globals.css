@@ -1,0 +1,114 @@
+:root {
+  --bg-color-light: #ffffff;
+  --bg-color-secondary-light: #f7f0ef;
+  --text-primary-light: #303030;
+  --text-secondary-light: #565656;
+  --card-border-light: rgb(231, 231, 231);
+  --card-border-hover-light: rgb(214, 214, 214);
+
+  --bg-color-dark: #121212;
+  --bg-color-secondary-dark: #060606;
+  --text-primary-dark: #f7f0ef;
+  --text-secondary-dark: #f7f0ef;
+  --card-border-dark: #e4732f;
+  --card-border-hover-dark: #ff6000;
+
+  --brand-color: #e4732f;
+  --gray: gray;
+  --bg-color: null;
+  --bg-color-secondary: null;
+  --text-primary: null;
+  --text-secondary: null;
+  --card-border: null;
+  --card-border-hover: null;
+
+  --trans-dur: 0.6s;
+  --trans-timing: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --p1: 1rem;
+  --p2: 1.5rem;
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-corner {
+    background: none;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--brand-color);
+    border-radius: 10px;
+  }
+}
+
+.f-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.underline {
+  border-bottom: 1px solid var(--brand-color);
+}
+
+.dialog-open {
+  overflow: hidden;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+[data-theme='dark'] {
+  --bg-color: var(--bg-color-dark);
+  --bg-color-secondary: var(--bg-color-secondary-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --card-border: var(--card-border-dark);
+  --card-border-hover: var(--card-border-hover-dark);
+}
+
+[data-theme='light'] {
+  --bg-color: var(--bg-color-light);
+  --bg-color-secondary: var(--bg-color-secondary-light);
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --card-border: var(--card-border-light);
+  --card-border-hover: var(--card-border-hover-light);
+}
+
+html,
+body {
+  background: var(--bg-color);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: no-common-ligatures;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  transition-property: color, background, border;
+  transition-duration: var(--trans-dur);
+  box-sizing: border-box;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  accent-color: var(--brand-color);
+}
+
+@media only screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none !important;
+  }
+}

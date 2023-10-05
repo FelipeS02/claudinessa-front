@@ -1,0 +1,14 @@
+.wrapper {
+  background-color: var(--bg-color-secondary);
+  max-width: 1184px;
+  position: relative;
+  box-sizing: border-box;
+  flex-direction: column;
+  margin: auto;
+
+  @media only screen and (max-width: 768px) {
+    min-width: 100%;
+    max-width: initial;
+    gap: 0.5rem;
+  }
+}

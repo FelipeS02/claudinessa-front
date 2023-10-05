@@ -1,0 +1,126 @@
+/* Container */
+
+.card {
+  all: unset;
+  --size: 142px;
+  width: 48%;
+  position: relative;
+  display: flex;
+  background: var(--bg-color);
+  justify-content: space-between;
+  border: 1.5px solid var(--card-border);
+  border-radius: 4px;
+  max-height: var(--size);
+  overflow: hidden;
+  transition: inherit;
+}
+
+.card:hover {
+  border-color: var(--card-border-hover);
+  cursor: pointer;
+}
+
+.overlay {
+  all: unset;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+/* Info */
+
+.info {
+  display: inherit;
+  justify-content: center;
+  flex-direction: column;
+  width: 65%;
+  margin-inline: 15px;
+}
+
+.info > span:nth-child(2) {
+  height: 56px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  display: flex;
+  gap: 5px;
+}
+
+#oldprice {
+  position: relative;
+  text-decoration: line-through;
+  text-decoration-color: var(--brand-color);
+  text-decoration-thickness: 2px;
+  color: #909090;
+}
+
+/*Img*/
+
+.card > figure {
+  border-left: 1px solid var(--card-border);
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.card > figure > img {
+  object-fit: cover;
+  object-position: center;
+  height: var(--size);
+  width: var(--size);
+  position: relative;
+}
+
+.nostock > img {
+  filter: grayscale(1);
+}
+
+.nostock > figcaption {
+  font-size: 14px;
+  padding: 2px;
+  font-weight: 500;
+  background: var(--brand-color);
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-poppins);
+  position: absolute;
+}
+
+/* Querys */
+
+@media only screen and (max-width: 768px) {
+  .card {
+    --size: 112px;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    padding-block: 1rem;
+  }
+
+  .card:not(:last-child):after {
+    content: '';
+    border-bottom: 1px solid var(--brand-color);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .card > figure {
+    border: none;
+    border-radius: 8px;
+  }
+
+  .info {
+    margin: 0;
+  }
+
+  .info > span:nth-child(2) {
+    -webkit-line-clamp: 2;
+    height: 28px;
+  }
+}
