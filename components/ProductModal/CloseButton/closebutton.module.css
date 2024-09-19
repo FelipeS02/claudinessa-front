@@ -1,0 +1,23 @@
+.closebutton {
+  all: unset;
+  background: var(--bg-color);
+  display: flex;
+  padding: 0.4rem;
+  border-radius: 5px;
+  gap: 5px;
+  align-items: center;
+  color: var(--gray);
+  transition: color 250ms ease-in-out;
+}
+
+.closebutton:hover {
+  color: var(--text-primary) !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .closebutton:after {
+    content: 'Volver al listado';
+    font-size: medium;
+    cursor: pointer;
+  }
+}

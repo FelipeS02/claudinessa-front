@@ -1,0 +1,64 @@
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  padding-block: 0.5rem;
+  @media only screen and (max-width: 768px) {
+    padding-block: 0;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+/* Product body */
+.body {
+  display: grid;
+  width: 100%;
+  max-width: 1184px;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  height: 100%;
+  gap: 1rem;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.imgWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media only screen and (min-width: 1024px) {
+    max-width: 500px;
+    margin-inline: auto;
+  }
+}
+
+.img {
+  object-fit: contain;
+  background: url('https://as1.ftcdn.net/v2/jpg/02/63/01/96/1000_F_263019678_l8itk2nLobqMsoCpXx5eJlXgoKR4Ouuz.webp');
+  animation: animatedBackground 60s linear infinite alternate;
+  border-radius: 5px;
+  width: 100%;
+
+  @media only screen and (max-width: 768px) {
+    border-radius: 0;
+    max-height: 250px;
+  }
+}

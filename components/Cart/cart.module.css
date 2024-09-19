@@ -1,0 +1,78 @@
+.desktopContainer {
+  padding: var(--s3);
+  padding-bottom: 0;
+  border-left: 1px solid var(--brand-color);
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.cartFooter {
+  @apply sticky bottom-0 bg-layout-secondary pb-4;
+}
+
+.mobileContainer {
+  @apply bg-layout-secondary py-[1.2rem] px-4 border border-brand grid fixed bottom-0 w-full;
+}
+
+.cartItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 2px dashed #dddddd;
+  padding-block: 10px;
+}
+
+.cartItem > img {
+  background: var(--brand-color);
+}
+
+.cartItem:last-of-type {
+  border-bottom-style: solid;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.extras {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.heading {
+  justify-content: space-between;
+}
+
+.cartPrice {
+  padding-block: 5px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.cartPriceMobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.priceTitle {
+  font-weight: 500;
+}
